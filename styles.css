@@ -6,28 +6,36 @@
 
 body {
   font-family: 'Muli', sans-serif;
-  overflow: hidden;
   margin: 0;
-  background-color: #111;
+  background-color: rgb(20, 1, 16);
+
+  /* justify-content: center;
+  align-items: center; */
+
+  /* overflow: hidden; */
+  /* display: flex;*/
+}
+
+.main_container{
+  width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  padding: 10px 20px;
 }
 
 .container{
-  width: 100%;
   display: flex;
-  padding: 0 20px;
+  flex: 1;
+  transition: all 500ms ease-in-out;
 }
 
 .slide{
-  height: 80vh;
   border-radius: 20px;
-  margin: 20px;
+  margin: 1%;
   cursor: pointer;
   color: #fff;
-  flex: 1;
+  flex: 3;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -44,8 +52,12 @@ body {
   opacity: 0;
 }
 
+.container.active{
+  flex: 3;
+}
+
 .slide.active {
-  flex: 10;
+  flex: 15;
 }
 
 .slide.active h3{
